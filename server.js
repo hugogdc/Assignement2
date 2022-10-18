@@ -24,6 +24,7 @@ app.get('/video', (req, res) => {
 
 // serve the json info with the lenght associated to the sent name
 app.get('/getLength', function(req, res) {
+    console.log(req.query);
     var reqJson = req.query.name;
     var result = JSON.stringify({name:reqJson, lenght:reqJson.length});
     console.log("Sending  : " + result);
